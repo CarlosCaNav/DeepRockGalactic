@@ -1,18 +1,19 @@
 <div class="fondo">
   <div class="miniCarta" style="order: 1" (click)="tipo('evento')">
-    <img src="/cartas/enves/evento.jpeg" height="100%">
+    <img class="miniatura" src="/cartas/enves/evento.jpeg" height="100%">
   </div>
   <div class="miniCarta" style="order: 2" (click)="tipo('horda')">
-    <img src="/cartas/enves/horda.jpeg" height="100%">
+    <img class="miniatura" src="/cartas/enves/horda.jpeg" height="100%" >
   </div>
   <div class="miniCarta" style="order: 3" (click)="tipo('rockstone')">
-    <img src="/cartas/enves/rockstone.jpeg" height="100%">
+    <img class="miniatura" src="/cartas/enves/rockstone.jpeg" height="100%">
   </div>
   <div class="miniCarta" style="order: 4" (click)="tipo('municion')">
-    <img src="/cartas/enves/municion.jpeg" height="100%">
+    <img class="miniatura" src="/cartas/enves/municion.jpeg" height="100%">
   </div>
 
   <div class="carta" (click)="resultado()">
-    <img [src]="this.urlCarta" height="100%">
+    <!-- quiero añadir un efecto que gira al pulsar la imagen en un futuro  [ngStyle]="{rotacion}"-->
+    <img [src]="this.urlCarta" height="100%" width="100%" style="border-radius: 20px;">
   </div>
 </div>

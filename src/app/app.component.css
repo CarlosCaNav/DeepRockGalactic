@@ -5,21 +5,38 @@
     background-color: yellow;
     height: 100vh;
     width: 100vw;
-
+    overflow: hidden;
+    user-select: none;
 }
 
 .miniCarta {
     margin-top: 1vh;
     height: 15vh;
     width: 24vw;
-  /*   border: 2px solid black; */
+     /* border: 2px solid black; */
     text-align: center;
+}
+
+.miniatura{
+    border-radius: 5px;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+}
+.miniatura:active{
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+    scale: 0.99;
 }
 
 .carta {
     order: 5;
-    height: 80vh;
-    width: 100vw;
-   /*  border: 2px solid red; */
-    text-align: center;    
-}
+    height: 70vh;
+    /*  width: 80vw; */
+    /*   border: 2px solid red; */
+    text-align: center;
+    border-radius: 20px;
+    box-shadow: 8px 8px 8px rgba(0, 0, 0, 0.5);
+    }
+
+    .carta:active{
+        box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+        scale: 0.99;
+    }
