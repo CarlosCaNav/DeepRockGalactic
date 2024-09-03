@@ -1,19 +1,22 @@
 <div class="fondo">
-  <div class="miniCarta" style="order: 1" (click)="tipo('evento')">
+  <div class="miniCarta" style="order: 1" (click)="elegirBaraja('evento')">
+    <div class="restante">{{barajas['evento'].numeroCartas - barajas['evento'].usadas.length}}</div>
     <img class="miniatura" src="/cartas/enves/evento.jpeg" height="100%">
   </div>
-  <div class="miniCarta" style="order: 2" (click)="tipo('horda')">
+  <div class="miniCarta" style="order: 2" (click)="elegirBaraja('horda')">
+    <div class="restante">{{barajas['horda'].numeroCartas - barajas['horda'].usadas.length}}</div>
     <img class="miniatura" src="/cartas/enves/horda.jpeg" height="100%" >
   </div>
-  <div class="miniCarta" style="order: 3" (click)="tipo('rockstone')">
+  <div class="miniCarta" style="order: 3" (click)="elegirBaraja('rockstone')">
+    <div class="restante">{{barajas['rockStone'].numeroCartas - barajas['rockStone'].usadas.length}}</div>
     <img class="miniatura" src="/cartas/enves/rockstone.jpeg" height="100%">
   </div>
-  <div class="miniCarta" style="order: 4" (click)="tipo('municion')">
+  <div class="miniCarta" style="order: 4" (click)="elegirBaraja('municion')">
+    <div class="restante">{{barajas['municion'].numeroCartas - barajas['municion'].usadas.length}}</div>
     <img class="miniatura" src="/cartas/enves/municion.jpeg" height="100%">
   </div>
 
-  <div class="carta" (click)="resultado()">
-    <!-- quiero añadir un efecto que gira al pulsar la imagen en un futuro  [ngStyle]="{rotacion}"-->
-    <img [src]="this.urlCarta" height="100%" width="100%" style="border-radius: 20px;">
+  <div class="carta" (click)="sacarCarta()">
+     <img class="imagenCarta" [src]="this.urlCarta" height="100%" width="100%" [ngStyle]="{'rotate':this.rotacion + 'deg'}">
   </div>
 </div>
