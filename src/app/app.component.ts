@@ -23,7 +23,8 @@ export class AppComponent {
   
   /* carta en pantalla */
   rotacion: number = 0;
-  enves: boolean = true;
+  transicion: number = 1; /* duración de la animación en segundos */
+  enves: boolean = true; /* envés es la parte de atrás de las cartas */
   cartaElegida: number = 0;
   tipoDeCarta: string = "evento";
   urlCarta: string = "/cartas/enves/evento.jpeg";
@@ -40,16 +41,18 @@ export class AppComponent {
       this.gestionarCarta(this.tipoDeCarta);
 
       if (this.cartaElegida > 0) {
-        this.rotacion=1800;
+        this.transicion = 2;
+        this.rotacion=3600;
         setTimeout(() => {
           this.urlCarta = "cartas/" + this.tipoDeCarta + "/" + this.idioma + "/" + this.cartaElegida + ".jpeg";
           console.log("cartas/" + this.tipoDeCarta + "/" + this.idioma + "/" + this.cartaElegida + ".jpeg");
-        }, 500);
+        }, this.transicion/2*1000);
         this.enves = false;
       }
       else { this.urlCarta = "/cartas/vacio.jpeg" }
     }
     else {
+      this.transicion = 0.2;
       this.rotacion = 0;
       setTimeout(() => {
         this.urlCarta = "/cartas/enves/" + this.tipoDeCarta + ".jpeg";

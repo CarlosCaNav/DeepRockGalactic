@@ -19,7 +19,6 @@
 
 .miniatura{
     border-radius: 5px;
-    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
 }
 .miniatura:active{
     box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
@@ -29,6 +28,7 @@
 .carta {
     order: 5;
     height: 60vh;
+    user-drag: none;
     /*  width: 80vw; */
    /*  border: 2px solid red; */
     text-align: center;
@@ -38,11 +38,14 @@
 
     .carta:active{
         scale: 0.99;
+        transition: 0.1s;
+        rotate: -20deg;
+        /* transform: scaleX(0.7); */
     }
 
 
     .imagenCarta{
         border-radius: 20px; 
         box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
-        transition: 1s;
+        min-width: 200px;
     }
