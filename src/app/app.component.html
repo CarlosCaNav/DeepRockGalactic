@@ -1,4 +1,14 @@
 <div class="fondo">
+  <div *ngFor="let baraja of son ">
+    <div class="miniCarta" style="order: 1" (click)="elegirBaraja(baraja)">
+      <div class="restante">{{barajas[baraja].numeroCartas - barajas[baraja].usadas.length}}</div>
+      <img class="miniatura" [src]="'/cartas/enves/' + baraja + '.jpeg'" height="100%"
+        [ngStyle]="{'box-shadow': '2px ' + (barajas[baraja].numeroCartas - barajas[baraja].usadas.length)/2 + 
+        'px 0px rgba(0, 0, 0, 0.5),5px '  + (barajas[baraja].numeroCartas - barajas[baraja].usadas.length + 5)/2 + 'px 5px rgba(0, 0, 0, 0.5)'}">
+    </div>
+  </div>
+
+  <!-- 
   <div class="miniCarta" style="order: 1" (click)="elegirBaraja('evento')">
     <div class="restante">{{barajas['evento'].numeroCartas - barajas['evento'].usadas.length}}</div>
     <img class="miniatura" src="/cartas/enves/evento.jpeg" height="100%"
@@ -18,10 +28,10 @@
     <div class="restante">{{barajas['municion'].numeroCartas - barajas['municion'].usadas.length}}</div>
     <img class="miniatura" src="/cartas/enves/municion.jpeg" height="100%"
     [ngStyle]="{'box-shadow': '2px ' + (barajas['municion'].numeroCartas - barajas['municion'].usadas.length)/2 + 'px 0px rgba(0, 0, 0, 0.5),5px '  + (barajas['municion'].numeroCartas - barajas['municion'].usadas.length + 5)/2 + 'px 5px rgba(0, 0, 0, 0.5)'}">
-  </div>
+  </div> -->
 
   <div class="carta" (click)="sacarCarta()">
-     <img class="imagenCarta" [src]="this.urlCarta" height="100%" width="100%" [ngStyle]="{'rotate':this.rotacion + 'deg',
+    <img class="imagenCarta" [src]="this.urlCarta" height="100%" width="100%" [ngStyle]="{'rotate':this.rotacion + 'deg',
         'transition': transicion + 's'}">
   </div>
 </div>

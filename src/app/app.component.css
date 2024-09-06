@@ -13,14 +13,18 @@
     margin-top: 1vh;
     height: 15vh;
     width: 24vw;
-     /* border: 2px solid black; */
+    /* border: 2px solid black; */
     text-align: center;
 }
 
-.miniatura{
+.miniatura {
     border-radius: 5px;
+    -webkit-user-drag: none;
+         background-image: url(/cartas/enves/municion.jpeg)
+
 }
-.miniatura:active{
+
+.miniatura:active {
     box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
     scale: 0.99;
 }
@@ -28,24 +32,25 @@
 .carta {
     order: 5;
     height: 60vh;
-    user-drag: none;
     /*  width: 80vw; */
-   /*  border: 2px solid red; */
+    /*  border: 2px solid red; */
     text-align: center;
-    border-radius: 20px;/* 
+    border-radius: 20px;
+    /* 
     box-shadow: 8px 8px 8px rgba(0, 0, 0, 0.5); */
-    }
+}
 
-    .carta:active{
-        scale: 0.99;
-        transition: 0.1s;
-        rotate: -20deg;
-        /* transform: scaleX(0.7); */
-    }
+.carta:active {
+    scale: 0.99;
+    transition: 0.05s;
+    rotate: -20deg;
+    /* transform: scaleX(0.7); */
+}
 
 
-    .imagenCarta{
-        border-radius: 20px; 
-        box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
-        min-width: 200px;
-    }
+.imagenCarta {
+    border-radius: 20px;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+    min-width: 200px;
+    -webkit-user-drag: none;
+}
